@@ -1,9 +1,11 @@
-import React from 'React';
+import React from 'react';
 
 const Results = ({ results }) => {
-  return (
-    <>
-      <h3>Results</h3>
+  return !results.length ? (
+    <p className='center'>No matching results</p>
+  ) : (
+    <section className='center'>
+      <h2>Results</h2>
       <table>
         <thead>
           <tr>
@@ -22,7 +24,7 @@ const Results = ({ results }) => {
           ))}
         </tbody>
       </table>
-    </>
+    </section>
   );
 };
 

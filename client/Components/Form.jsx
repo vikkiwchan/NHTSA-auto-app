@@ -24,7 +24,7 @@ const Form = ({ setResults }) => {
   };
 
   return (
-    <form>
+    <form className='center'>
       <label>Year:</label>
       <input
         value={year}

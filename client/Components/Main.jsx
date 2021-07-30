@@ -8,7 +8,7 @@ const Main = () => {
 
   return (
     <div>
-      <h1>NHTSA Datasets and APIs</h1>
+      <h1 className='center'>NHTSA Datasets and APIs</h1>
       <hr />
       <Form setResults={setResults} />
       <Results results={results} />

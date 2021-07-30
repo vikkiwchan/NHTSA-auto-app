@@ -1,6 +1,7 @@
 body {
-  margin: 0;
+  margin: 2rem;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 table,
@@ -8,4 +9,14 @@ th,
 td {
   border: 1px solid black;
   border-collapse: collapse;
+  padding: 1rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.center > * {
+  margin: 0.5rem 0.15rem;
+  padding: 0.5rem;
 }
