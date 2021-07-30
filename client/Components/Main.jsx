@@ -4,7 +4,6 @@ import Results from './Results';
 
 const Main = () => {
   const [results, setResults] = useState([]);
-  console.log(results);
 
   return (
     <div>
