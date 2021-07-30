@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Form from './Form';
+import Results from './Results';
 
 const Main = () => {
+  const [results, setResults] = useState([]);
+  console.log(results);
+
   return (
     <div>
       <h1>NHTSA Datasets and APIs</h1>
       <hr />
-      <Form />
+      <Form setResults={setResults} />
+      <Results results={results} />
     </div>
   );
 };

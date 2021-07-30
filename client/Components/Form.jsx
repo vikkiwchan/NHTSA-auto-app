@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const Form = () => {
+const Form = ({ setResults }) => {
   const [year, setYear] = useState('');
   const [make, setMake] = useState('');
   const [model, setModel] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
-  const [results, setResults] = useState([]);
+  //   const [results, setResults] = useState([]);
 
   const onSubmit = async (ev) => {
     try {
       ev.preventDefault();
-      const { data } = await axios.get('/api/recalls', {
+      const {
+        data: { results },
+      } = await axios.get('/api/recalls', {
         params: { year, make, model },
       });
-      //console.log(data);
-      setResults(data);
+      setResults(results);
     } catch (error) {
       console.log(error);
       setErrorMsg(error.response.data.error);
