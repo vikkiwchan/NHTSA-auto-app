@@ -6,6 +6,21 @@ const Form = () => {
   const [make, setMake] = useState('');
   const [model, setModel] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
+  const [results, setResults] = useState([]);
+
+  const onSubmit = async (ev) => {
+    try {
+      ev.preventDefault();
+      const { data } = await axios.get('/api/recalls', {
+        params: { year, make, model },
+      });
+      //console.log(data);
+      setResults(data);
+    } catch (error) {
+      console.log(error);
+      setErrorMsg(error.response.data.error);
+    }
+  };
 
   return (
     <form>
