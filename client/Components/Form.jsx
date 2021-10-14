@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import axios from 'axios';git
+import axios from 'axios';
 
 const Form = ({ setResults }) => {
-  console.log('Hi');
   const [year, setYear] = useState('');
   const [make, setMake] = useState('');
   const [model, setModel] = useState('');
